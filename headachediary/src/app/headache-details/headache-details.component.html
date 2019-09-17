@@ -1,0 +1,9 @@
+<div *ngIf="headache">
+    <p>From <input type="date" [(ngModel)]="headache.startDate"> to <input type="date" [(ngModel)]="headache.endDate"></p>
+    <select [(ngModel)]="headache.type">
+        <option *ngFor="let t of type" value={{t.name}}>{{t.name}}</option>
+    </select>
+    <p>Did you take any medicine?</p>
+    <input type="radio" name="didTakeMedicine" [value]="true" [(ngModel)]="headache.didTakeMedicine" > Yes 
+    <input type="radio" name="didTakeMedicine"  [value]="false" [(ngModel)]="headache.didTakeMedicine"> No
+</div>

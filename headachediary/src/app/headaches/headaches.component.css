@@ -1,0 +1,15 @@
+div{
+    padding: 5px;
+}
+
+.headache{
+    border: 1px solid black;
+}
+
+.del, .new, .headache{
+    cursor: pointer;
+}
+
+span{
+    padding: 5px;
+}
