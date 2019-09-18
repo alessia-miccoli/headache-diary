@@ -1,14 +1,19 @@
-<div class="headache" 
-*ngFor ="let headache of headaches"
-(click)="onSelect(headache)">
-    <span class="type">{{headache.type}}</span>
-    <span class="date">{{headache.startDate}}</span>
-    <span class="date">{{headache.endDate}}</span>
-    <span class="medicineTaken">{{headache.didTakeMedicine ? "Medicine Taken" : "No Medicine Taken"}}</span>
-    <button class="del">x</button>
-</div>
-
 <div>
-    <button class="new" (click)="onSelect(headache)">+</button>
-    <app-headache-details [headache]="selectedHeadache"></app-headache-details> 
+    <div class="headache" 
+    *ngFor ="let headache of headaches"
+    (click)="onSelect(headache)">
+        <span class="type">{{headache.type}}</span>
+        <span class="date">{{headache.startDate}}</span>
+        <span class="date">{{headache.endDate}}</span>
+        <span class="medicineTaken">{{headache.didTakeMedicine ? "Medicine Taken" : "No Medicine Taken"}}</span>
+        <button class="del">x</button>
+    </div>
+
+    <div>
+        <button class="new" (click)="open()" [disabled]="openNew">+</button>
+        <app-headache-details [headache]="selectedHeadache"></app-headache-details> 
+        <app-new-headache [openNew]="openNew" (closeEvent)="receiveEvent($event)"></app-new-headache>
+    </div>
+
+    
 </div>

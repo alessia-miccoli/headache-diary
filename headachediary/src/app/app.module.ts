@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadachesComponent } from './headaches/headaches.component';
 import { HeadacheDetailsComponent } from './headache-details/headache-details.component';
+import { NewHeadacheComponent } from './new-headache/new-headache.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadachesComponent,
-    HeadacheDetailsComponent
+    HeadacheDetailsComponent,
+    NewHeadacheComponent
   ],
   imports: [
     BrowserModule,

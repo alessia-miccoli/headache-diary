@@ -1,0 +1,18 @@
+<div id="new-headache" *ngIf="openNew">
+    <label>Start Date: </label>
+    <input type="date" [(ngModel)]="newStartDate" >
+
+    <label>End Date</label>
+    <input type="date" [(ngModel)]="newEndDate" >
+
+    <select [(ngModel)]="newType" >
+        <option *ngFor="let t of type" value="t.name">{{t.name}}</option>
+    </select>
+    
+    <label>Did you take any medicine?</label>
+
+    <input type="radio" name="didTakeMedicine" [value]="true" [(ngModel)]="newDidTakeMedicine" > Yes 
+    <input type="radio" name="didTakeMedicine"  [value]="false" [(ngModel)]="newDidTakeMedicine"> No
+
+    <button>Add to List</button> <button (click)="closeNewHeadache()">Cancel</button>
+</div>
